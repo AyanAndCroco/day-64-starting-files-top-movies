@@ -6,7 +6,7 @@ from sqlalchemy import Integer, String, Float
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
-
+import os
 import requests
 
 '''
