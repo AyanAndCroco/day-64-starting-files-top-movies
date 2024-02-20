@@ -26,7 +26,7 @@ url = "https://api.themoviedb.org/3/search/movie"
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 
-api_key = "0d82e3ab6627f982b4eac500e7f7bb83"
+api_key = os.environ.get("API_KEY")
 
 
 class EditForm(FlaskForm):
@@ -41,7 +41,7 @@ class AddMovieForm(FlaskForm):
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 Bootstrap5(app)
 
 
